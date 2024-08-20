@@ -1,9 +1,5 @@
-// ignore_for_file: unused_import
-
 import 'package:bloc_counter_kuldii/bloc/counter/counter_bloc.dart';
 import 'package:bloc_counter_kuldii/bloc/theme/theme_bloc.dart';
-import 'package:bloc_counter_kuldii/pages/home_page.dart';
-import 'package:bloc_counter_kuldii/pages/other_page.dart';
 import 'package:bloc_counter_kuldii/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

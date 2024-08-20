@@ -1,5 +1,6 @@
 import 'package:bloc_counter_kuldii/bloc/counter/counter_bloc.dart';
 import 'package:bloc_counter_kuldii/bloc/theme/theme_bloc.dart';
+import 'package:bloc_counter_kuldii/widgets/app_bar_widget.dart';
 import 'package:bloc_counter_kuldii/widgets/button_widget.dart';
 import 'package:bloc_counter_kuldii/widgets/data_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,21 +16,11 @@ class HomePage extends StatelessWidget {
     ThemeBloc themeBloc = context.read<ThemeBloc>();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Home Page',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.pinkAccent,
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {
-              themeBloc.add(ThemeTooglePressed());
-            },
-            icon: const Icon(Icons.theater_comedy),
-          ),
-        ],
+      appBar: AppBarWidget(
+        title: "Home Page",
+        onActionPressed: () {
+          themeBloc.add(ThemeTooglePressed());
+        },
       ),
       body: Center(
         child: Row(
